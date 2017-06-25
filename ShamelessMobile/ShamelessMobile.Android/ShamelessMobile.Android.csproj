@@ -99,6 +99,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\StorageService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -121,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShamelessMobile\ShamelessMobile.csproj">
-      <Project>{f3f2f0c1-8100-4df9-852b-970235671707}</Project>
+      <Project>{aaf7ac31-4297-44d2-8131-d6cf8bfb2662}</Project>
       <Name>ShamelessMobile</Name>
     </ProjectReference>
   </ItemGroup>
