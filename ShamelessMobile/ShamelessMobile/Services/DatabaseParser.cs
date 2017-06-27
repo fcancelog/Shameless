@@ -4,7 +4,6 @@ using ShamelessMobile.Resources;
 using ShamelessMobile.Services.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using Xamarin.Forms;
 
 namespace ShamelessMobile.Services
@@ -12,12 +11,11 @@ namespace ShamelessMobile.Services
     public class DatabaseParser : IDatabaseParser
     {
         IStorageService _storageService = DependencyService.Get<IStorageService>();
+        IWebService _webService = DependencyService.Get<IWebService>();
 
-        public async void DownloadDatabase(string outputFile)
+        public void DownloadDatabase(string outputFile)
         {
-            HttpClient client = new HttpClient();
-            var result = await client.GetAsync(URLs.Json_Enc);
-            
+            _webService.DownloadFile(URLs.Json_Enc, Files.DBFileName);
         }
 
         public void DownloadSizes(string outputFile)
@@ -42,8 +40,8 @@ namespace ShamelessMobile.Services
 
         public Nintendo3DSTitle[] ParseFromDatabase(string databasePath, string sizesPath)
         {
-            var database = _storageService.LoadTextFile(Files.DBPath);
-            var sizesDb = _storageService.LoadTextFile(Files.SizesPath);
+            var database = _storageService.LoadTextFile(Files.DBFileName);
+            var sizesDb = _storageService.LoadTextFile(Files.SizesFileName);
 
             Func<JToken, string> value = t => t.ToString();
             var titles = JArray.Parse(database);
