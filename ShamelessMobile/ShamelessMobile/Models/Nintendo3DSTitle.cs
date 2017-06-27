@@ -8,7 +8,7 @@ namespace ShamelessMobile.Models
 {
     public class Nintendo3DSTitle
     {
-        public Nintendo3DSTitle(string titleId, string encKey, string name, string region, string serial, long size)
+        public Nintendo3DSTitle(string titleId, string encKey, string name, string type, string region, string serial, long size)
         {
 
         }
