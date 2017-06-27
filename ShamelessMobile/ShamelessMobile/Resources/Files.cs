@@ -8,7 +8,7 @@ namespace ShamelessMobile.Resources
 {
     public static class Files
     {
-        public static string DBPath = "db.json";
-        public static string SizesPath = "sizes.json";
+        public static string DBFileName = "db.json";
+        public static string SizesFileName = "sizes.json";
     }
 }
