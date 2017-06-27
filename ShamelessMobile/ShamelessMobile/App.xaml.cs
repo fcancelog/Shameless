@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShamelessMobile.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace ShamelessMobile
         {
             InitializeComponent();
 
-            MainPage = new ShamelessMobile.MainPage();
+            MainPage = new NavigationPage(new MainView());
         }
 
         protected override void OnStart()
