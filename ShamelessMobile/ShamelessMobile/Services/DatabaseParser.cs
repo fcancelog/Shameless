@@ -20,7 +20,7 @@ namespace ShamelessMobile.Services
 
         public void DownloadSizes(string outputFile)
         {
-            throw new NotImplementedException();
+            _webService.DownloadFile(URLs.Sizes, Files.SizesFileName);
         }
 
         public string HumanReadableFileSize(long size)
