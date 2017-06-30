@@ -45,7 +45,10 @@
     <Compile Include="Services\DatabaseParser.cs" />
     <Compile Include="Services\Interfaces\IDatabaseParser.cs" />
     <Compile Include="Services\Interfaces\IStorageService.cs" />
+    <Compile Include="Services\Interfaces\ITitleFilteringService.cs" />
     <Compile Include="Services\Interfaces\IWebService.cs" />
+    <Compile Include="Services\TitleFilter.cs" />
+    <Compile Include="Services\TitleFilteringService.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MainView.xaml.cs">
