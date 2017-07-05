@@ -16,5 +16,20 @@ namespace ShamelessMobile.ViewModels.Base
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+        public void OnStart()
+        {
+
+        }
+
+        public void OnResume()
+        {
+
+        }
+
+        public void OnExit()
+        {
+
+        }
     }
 }
