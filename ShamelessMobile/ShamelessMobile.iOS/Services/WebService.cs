@@ -17,6 +17,12 @@ namespace ShamelessMobile.iOS.Services
 {
     public class WebService : IWebService
     {
+        public byte[] DownloadData(string url)
+        {
+            WebClient client = new WebClient();
+            return client.DownloadData(url);
+        }
+
         public void DownloadFile(string url, string filename)
         {
             WebClient client = new WebClient();
